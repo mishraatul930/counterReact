@@ -12,7 +12,12 @@ function App() {
   };
   const decreaseValue = () => {
     console.log("Decrease Code working");
-    setCounter(counter - 1);
+    if (counter === 0) {
+      console.log("Counter is already at 0");
+      return;
+    } else {
+      setCounter(counter - 1);
+    }
     console.log(counter);
   };
   return (
